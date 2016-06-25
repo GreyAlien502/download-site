@@ -1,4 +1,3 @@
-import requests
 import urllib
 
 def saveFile(filename, filecontents):
