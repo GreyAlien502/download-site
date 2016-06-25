@@ -2,8 +2,8 @@ import requests
 import urllib
 
 def saveFile(filename, filecontents):
-	f = open(filename, 'w')
-	f.write(filecontents)
+	f = open(filename, 'wb')
+	f.write(bytes(filecontents))
 	f.close()
 
 def urlget(site):
