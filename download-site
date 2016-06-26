@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import functions
+import os
 
-print("Downloaded:\n"+'\n'.join(functions.siteget(sys.argv[1], [])))
+[path, filename] = os.path.split(sys.argv[1])
+print("Downloaded:\n"+'\n'.join(functions.siteget(path+'/'+filename, [path+'/'+directory for directory in os.listdir()])))
